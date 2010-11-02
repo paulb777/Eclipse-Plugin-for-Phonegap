@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="com.mds.apg.category.wizards"
+            name="Phonegap Wizards">
+      </category>
+      <wizard
+            category="com.mds.apg.category.wizards"
+            class="com.mds.apg.wizards.AndroidPgProjectNewWizard"
+            hasPages="true"
+            icon="icons/phonegap.png"
+            id="com.mds.apg.wizard.new.custom"
+            name="Phonegap for Android Project"
+            project="true">
+      </wizard>
+
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.ui"
+            name="Web">
+      </category>
+      <primaryWizard
+            id="com.mds.apg.wizard.new.custom">
+      </primaryWizard>
+   </extension>
+
+</plugin>
