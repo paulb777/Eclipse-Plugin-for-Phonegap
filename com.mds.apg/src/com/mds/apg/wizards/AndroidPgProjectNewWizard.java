@@ -303,13 +303,11 @@ public class AndroidPgProjectNewWizard extends NewProjectWizard implements INewW
         FileCopy.recursiveCopy(phonegapDirectory + "/" + "framework" + "/" + "src",
                 Platform.getLocation().toString() + "/" + newAndroidProject.getName() + "/" + "src");
 
-        addDefaultDirectories(newAndroidProject, "/", new String[]{"libs"} , monitor);
-
-        String libsDir = Platform.getLocation().toString() + "/" + newAndroidProject.getName() + "/" + "libs" + "/";
         final String commonCodecLoc = "commons-codec-1.3.jar";
 
-        FileCopy.copy(phonegapDirectory + "/" + "framework" + "/" + "libs" + "/" + commonCodecLoc,
-                libsDir + commonCodecLoc);
+//      Point at original file in phonegap directory instead of copy
+//        FileCopy.copy(phonegapDirectory + "/" + "framework" + "/" + "libs" + "/" + commonCodecLoc,
+//                libsDir + commonCodecLoc);
 
         // Now update classpath  .classpath should end up like the following.  Note that the path specifies that 
         // phonegap.jar should be included in the build.  sourcepath enables the phonegap source to be found for debugging
@@ -331,7 +329,7 @@ public class AndroidPgProjectNewWizard extends NewProjectWizard implements INewW
 
         // Create the new Classpath entry 
 
-        IClasspathEntry newPath = JavaCore.newLibraryEntry(new Path(libsDir + commonCodecLoc),
+        IClasspathEntry newPath = JavaCore.newLibraryEntry(new Path(phonegapDirectory + "/" + "framework" + "/" + "libs" + "/" + commonCodecLoc),
                 new Path(phonegapDirectory + "/" + "framework" + "/" + "src" + "/"), null);
 
         newClasspaths[classpathList.length] = newPath;
