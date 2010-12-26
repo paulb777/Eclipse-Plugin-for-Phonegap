@@ -2,21 +2,12 @@
 
 package com.mds.apg.wizards;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class FileCopy {
-    public static void main(String[] args) {
-        try {
-            copy("fromFile.txt", "toFile.txt");
-        } catch (IOException e) {
-            System.err.println(e.getMessage());
-        }
-    }
 
     public static void recursiveCopy(String fromFileName, String toFileName) throws IOException {
         copy (fromFileName, toFileName, true, false);
