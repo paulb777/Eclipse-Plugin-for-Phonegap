@@ -16,8 +16,8 @@
             name="Phonegap for Android Project"
             project="true">
       </wizard>
-
    </extension>
+   
    <extension
          point="org.eclipse.ui.newWizards">
       <category
@@ -27,6 +27,25 @@
       <primaryWizard
             id="com.mds.apg.wizard.new.custom">
       </primaryWizard>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            description="PhoneGap Project Wizard"
+            label="PhoneGap Project Wizard"
+            visible="true"
+            id="com.example.helloworld.actionSet">
+         <action
+               class="com.mds.apg.actions.PhonegapBarAction"
+               icon="icons/phonegap.png"
+               id="com.mds.apg.actions.PhonegapBarAction"
+               label="New PhoneGap Project ..."
+               style="push"
+               toolbarPath="PhoneGapWizards"
+               tooltip="Create a PhoneGap project">
+         </action>
+      </actionSet>
    </extension>
 
 </plugin>
