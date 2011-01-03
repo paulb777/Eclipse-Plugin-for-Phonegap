@@ -1,1 +1,5 @@
-This is the code for an Eclipse plug-in for PhoneGap for Android.  The initial public release was November 2, 2010.  More details at http://www.mobiledevelopersolutions.com and the Google Group http://groups.google.com/group/eclipse-plugin-for-phonegap
+Note: The code has been transitioned to http://code.google.com/a/eclipselabs.org/p/mobile-web-development-with-phonegap/ so that its build can be used from the Eclipse Install New Feature.
+
+This site will not be kept up-to-date.
+
+This is the code for an Eclipse plug-in for PhoneGap for Android.  The initial public release was November 2, 2010.  The 1.1 release is planned for January 5, 2011.  More details at http://www.mobiledevelopersolutions.com and the Google Group http://groups.google.com/group/eclipse-plugin-for-phonegap
